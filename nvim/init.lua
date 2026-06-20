@@ -191,6 +191,13 @@ do
     styles = {
       comments = { italic = false },
     },
+
+    on_highlights = function(hl, c)
+      hl.Comment = {
+        fg ="#7a88cf",
+        italic = false,
+      }
+    end,
   }
 
   vim.cmd.colorscheme 'tokyonight-night'
