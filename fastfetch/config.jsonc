@@ -1,0 +1,129 @@
+// Inspired by Catnap
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "file",
+    "source": "~/.config/fastfetch/logos/logo.txt",
+    "padding":{
+      "top": 2
+        }
+    },
+    "display": {
+        "separator": " "
+    },
+    "modules": [
+        {
+            "key": "╭─────────╮",
+            "type": "custom"
+        },
+        {
+            "key": "│ {#32}name    {#keys}│",
+            "type": "title",
+            "format": "{host-name}"
+        },
+        {
+            "key": "│ {#33}host    {#keys}│",
+            "type": "host"
+        },
+        {
+            "key": "│ {#34}date    {#keys}│",
+            "type": "DateTime"
+        },
+        {
+            "key": "│ {#35}uptime  {#keys}│",
+            "type": "uptime"
+        },
+        {
+            "key": "│ {#36}pkgs    {#keys}│",
+            "type": "packages"
+        },
+        {
+            "key": "│ {#31}distro  {#keys}│",
+            "type": "os"
+        },
+        {
+            "key": "│ {#32}kernel  {#keys}│",
+            "type": "kernel"
+        },
+        {
+            "key": "│ {#33}desktop {#keys}│",
+            "type": "de"
+        },
+        {
+            "key": "│ {#34}wm      {#keys}│",
+            "type": "wm"
+        },
+        {
+            "key": "│ {#35}display {#keys}│",
+            "type": "display"
+        },
+        {
+            "key": "│ {#36}theme   {#keys}│",
+            "type": "theme"
+        },
+        {
+            "key": "│ {#32}font    {#keys}│",
+            "type": "font"
+        },
+        {
+            "key": "│ {#33}editor  {#keys}│",
+            "type": "Editor"
+        },
+        {
+            "key": "│ {#34}terminal{#keys}│",
+            "type": "terminal"
+        },
+        {
+            "key": "│ {#35}font    {#keys}│",
+            "type": "terminalfont"
+        },
+        {
+            "key": "│ {#36}shell   {#keys}│",
+            "type": "shell"
+        },
+        {
+            "key": "│ {#31}cpu     {#keys}│",
+            "type": "cpu",
+            "showPeCoreCount": true
+        },
+        {
+            "key": "│ {#32}memory  {#keys}│",
+            "type": "memory"
+        },
+        {
+            "key": "│ {#33}swap    {#keys}│",
+            "type": "swap"
+        },
+        {
+            "key": "│ {#34}disk    {#keys}│",
+            "type": "disk",
+            "folders": "/"
+        },
+        {
+            "key": "│ {#35}network {#keys}│",
+            "type": "localip",
+            "format": "{ipv4} ({ifname})"
+        },
+        {
+            "key": "│ {#36}battery {#keys}│",
+            "type": "battery"
+        },
+        {
+            "key": "│ {#31}power   {#keys}│",
+            "type": "poweradapter"
+        },
+        {
+            "key": "├─────────┤",
+            "type": "custom"
+        },
+        {
+            "key": "│ {#39}colors  {#keys}│",
+            "type": "colors",
+            "symbol": "circle"
+        },
+        {
+            "key": "╰─────────╯",
+            "type": "custom"
+        }
+    ]
+}

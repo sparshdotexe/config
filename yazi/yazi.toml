@@ -1,0 +1,35 @@
+[mgr]
+  ratio = [ 2, 3, 10 ]
+
+[opener]
+edit = [
+  { run = 'nvim "$@"', block = true }
+]
+
+image = [
+  { run = 'chromium "$@"', orphan = true }
+]
+
+pdf = [
+  { run = 'chromium "$@"', orphan = true }
+]
+
+video = [
+  { run = 'clapper "$@"', orphan = true }
+]
+
+audio = [
+  { run = 'clapper "$@"', orphan = true }
+]
+
+[open]
+rules = [
+  { mime = "application/json", use = "edit" },
+  { mime = "application/jsonc", use = "edit" },
+  { mime = "text/*", use = "edit" },
+  { mime = "image/*", use = "image" },
+  { mime = "video/*", use = "video" },
+  { mime = "audio/*", use = "audio" },
+  { mime = "application/pdf", use = "pdf" }
+]
+

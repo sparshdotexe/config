@@ -1,0 +1,153 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    icon-theme: "Papirus";
+    display-drun: "";
+    display-run: "Run";
+    display-window: "Windows";
+    drun-display-format: "{name}";
+    window-format: "{w} · {c} · {t}";
+    font: "Cascadia Code 10";
+    terminal: "ghostty";
+
+    kb-row-up: "Up,Control+k";
+    kb-row-down: "Down,Control+j";
+    kb-accept-entry: "Return,KP_Enter";
+    kb-remove-to-eol: "Control+Shift+e";
+    kb-mode-next: "Shift+Right,Control+Tab";
+    kb-mode-previous: "Shift+Left,Control+Shift+Tab";
+}
+
+* {
+    bg: #1e1e2e;
+    bg-alt: #282839;
+    fg: #cdd6f4;
+    fg-alt: #a6adc8;
+    
+    accent: #89b4fa;
+    accent-alt: #74c7ec;
+    urgent: #f38ba8;
+    
+    background-color: transparent;
+    text-color: @fg;
+    
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    /*location: northwest;
+    anchor: northwest;*/
+
+    location: center;
+    width: 300px;
+    background-color: @bg;
+    border: 2px solid;
+    border-color: @accent;
+    border-radius: 0px;
+    padding: 20px;
+}
+
+mainbox {
+    spacing: 15px;
+    children: [inputbar, message, listview];
+}
+
+inputbar {
+    spacing: 10px;
+    padding: 12px;
+    background-color: @bg-alt;
+    border-radius: 8px;
+    children: [prompt, entry];
+}
+
+prompt {
+    text-color: @accent;
+    font: "JetBrains Mono Bold 11";
+}
+
+entry {
+    placeholder: "what the fuck do you want?";
+    placeholder-color: @fg-alt;
+    text-color: @fg;
+    cursor: text;
+    cursor-color: @accent;
+}
+
+message {
+    padding: 10px;
+    background-color: @bg-alt;
+    border-radius: 8px;
+    text-color: @fg-alt;
+}
+
+textbox {
+    padding: 5px;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    fixed-height: false;
+    scrollbar: false;
+    spacing: 5px;
+}
+
+scrollbar {
+    width: 4px;
+    handle-width: 6px;
+    handle-color: @accent;
+    border-radius: 4px;
+    background-color: @bg-alt;
+}
+
+element {
+    padding: 10px 12px;
+    border-radius: 6px;
+    spacing: 10px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element normal.urgent {
+    background-color: @urgent;
+    text-color: @bg;
+}
+
+element normal.active {
+    background-color: @accent-alt;
+    text-color: @bg;
+}
+
+element selected.normal {
+    background-color: @accent;
+    text-color: @bg;
+}
+
+element selected.urgent {
+    background-color: @urgent;
+    text-color: @bg;
+}
+ 
+element selected.active {
+    background-color: @accent-alt;
+    text-color: @bg;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element-icon {
+    size: 24px;
+    vertical-align: 0.5;
+}
+
+element-text {
+    vertical-align: 0.5;
+}

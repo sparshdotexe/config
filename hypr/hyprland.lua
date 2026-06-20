@@ -1,0 +1,6 @@
+require("modules.animations")
+require("modules.bindings")
+require("modules.exec")
+require("modules.input")
+require("modules.looknfeel")
+require("modules.windowrules")

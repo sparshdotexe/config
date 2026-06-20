@@ -1,0 +1,121 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 24,
+  "spacing": 0,
+
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "bluetooth",
+    "custom/sep",
+    "network",
+    "custom/sep",
+    "pulseaudio",
+    "custom/sep",
+    "backlight",
+    "custom/sep",
+    "battery"
+  ],
+
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{name}",
+    "persistent-workspaces": {
+      "*" : 5
+    }
+  },
+
+  "bluetooth": {
+    "format": "",
+    "format-off": "󰂲",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱 {device_alias}",
+    "format-no-controller": "",
+    "tooltip-format": "Devices connected: {num_connections}",
+    "on-click": "blueman-manager"
+  },
+
+  "network": {
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format": "{icon} {essid}",
+    "format-wifi": "{icon} {essid}",
+    "format-ethernet": "󰀂",
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "spacing": 1,
+    "on-click": "ghostty -e wlctl"
+  },
+
+  "pulseaudio": {
+  "format": "{icon} {volume}%",
+  "format-muted": " muted",
+  "format-icons": {
+    "headphone": "",
+    "headset": "〰",
+    "default": ["", "", ""]
+  },
+  "on-click": "pavucontrol"
+  },
+
+  "backlight": {
+    "device": "amdgpu_bl1",
+    "format": "{icon} {percent}%",
+    "format-icons": ["✦"],
+    "tooltip-format": "light {percent}%",
+    "on-click": "ghostty -e bash -c 'light -G; sleep 1'"
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%a - %d %b %Y}",
+    "tooltip-format": "<big>{:%A, %d %B %Y}</big>\n<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffffff'><b>{}</b></span>",
+        "days": "<span color='#cccccc'>{}</span>",
+        "weeks": "<span color='#888888'>W{}</span>",
+        "weekdays": "<span color='#aaaaaa'>{}</span>",
+        "today": "<span color='#ff5555'><b>{}</b></span>"
+      }
+    }
+  },
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-not-charging": " {capacity}",
+    "format-discharging": "{icon} {capacity}",
+    "format-charging": "{icon} {capacity}",
+    "format-plugged": "",
+    "format-icons": {
+      "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+      "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "format-full": "󰂅",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "interval": 5,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "on-click": "ghostty -e bash -c 'powerprofilesctl get; sleep 1'"
+  },
+
+  "custom/sep": {
+    "format" : "|",
+    "interval": 0
+  }
+}

@@ -1,0 +1,6 @@
+hl.on("hyprland.start", function ()
+  hl.exec_cmd("waybar")
+  hl.exec_cmd("~/.config/hypr/scripts/night-mode")
+  hl.exec_cmd("awww-daemon & awww img ~/pictures/wallpapers/bluish.png")
+  hl.exec_cmd("echo 50 | sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold >/dev/null")
+end)
