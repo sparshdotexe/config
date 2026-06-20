@@ -100,11 +100,6 @@
             "folders": "/"
         },
         {
-            "key": "│ {#35}network {#keys}│",
-            "type": "localip",
-            "format": "{ipv4} ({ifname})"
-        },
-        {
             "key": "│ {#36}battery {#keys}│",
             "type": "battery"
         },
