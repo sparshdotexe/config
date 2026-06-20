@@ -9,8 +9,8 @@
 @define-color mag   #9F86C0; 
 @define-color cyn   #0db9d7; 
 @define-color brblk #444b6a; 
-@define-color white #ffffff
-; 
+@define-color white #ffffff; 
+
 * {
   border: none;
   border-radius: 0;
