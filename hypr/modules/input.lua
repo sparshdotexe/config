@@ -3,7 +3,7 @@ hl.config({
     kb_layout = "us",
     kb_variant = "dvorak",
     kb_model = "",
-    kb_options = "caps:escape",
+    kb_options = "caps:escape, altwin:swap_alt_win",
     kb_rules = "",
 
     repeat_rate = 35,
