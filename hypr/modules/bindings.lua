@@ -83,8 +83,8 @@ hl.bind("SUPER + ALT + code:21", hl.dsp.window.resize({ x = 0, y = 20, relative 
 
 -- Screenshots
 hl.bind("Print", hl.dsp.exec_cmd("hyprshot -m output -c -o ~/pictures/screenshots"))
-hl.bind("SUPER + Print", hl.dsp.exec_cmd("hyprshot -m window -c -o ~/pictures/screenshots"))
-hl.bind("SUPER + SHIFT + Print", hl.dsp.exec_cmd("hyprshot -m region -c -o ~/pictures/screenshots"))
+hl.bind("ALT + Print", hl.dsp.exec_cmd("hyprshot -m window -c -o ~/pictures/screenshots"))
+hl.bind("ALT + SHIFT + Print", hl.dsp.exec_cmd("hyprshot -m region -c -o ~/pictures/screenshots"))
 
 -- Notifications
 hl.bind("SUPER + comma", hl.dsp.exec_cmd("swaync-client -C"))
