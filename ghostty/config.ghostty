@@ -25,7 +25,8 @@ font-size = 11
 
 #font-family = "JetBrainsMono Nerd Font"
 #font-family = "Cascadia Code"
-font-family = "Fira Code"
+#font-family = "Fira Code"
+font-family = "Iosevka"
 
 background = #000000
 background-opacity = 0.1
