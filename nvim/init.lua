@@ -164,6 +164,18 @@ do
 
   vim.pack.add { gh 'mrcjkb/rustaceanvim' }
 
+  vim.pack.add { gh 'lukas-reineke/indent-blankline.nvim'}
+  require('ibl').setup {
+    indent = {
+      char = '│',
+    },
+    scope = {
+      enabled = true,
+      show_start = false,
+      show_end = false,
+    },
+  }
+
   vim.pack.add { gh 'lewis6991/gitsigns.nvim' }
   require('gitsigns').setup {
     signs = {
