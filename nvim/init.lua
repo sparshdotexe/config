@@ -95,7 +95,7 @@ do
     vim.api.nvim_buf_set_lines(0, row, row, false, { "" })
   end, { desc = "Insert line below" })
 
-  vim.keymap.set("n", "<leader>e", function()
+  vim.keymap.set("n", "<leader>c", function()
     local row = vim.api.nvim_win_get_cursor(0)[1]
     vim.api.nvim_buf_set_lines(0, row - 1, row - 1, false, { "" })
   end, { desc = "Insert line above" })
