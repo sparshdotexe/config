@@ -11,7 +11,6 @@ hl.bind("SUPER + ALT + N", hl.dsp.exec_cmd("pkill hyprsunset || ~/.config/hypr/s
 hl.bind("SUPER + W", hl.dsp.exec_cmd("pkill waybar || waybar"))
 
 -- Notifications
-hl.bind("SUPER + CTRL + B", hl.dsp.exec_cmd("~/.config/hypr/scripts/battery-state"))
 hl.bind("SUPER + CTRL + T", hl.dsp.exec_cmd([[notify-send "$(date +'%H:%M')" "$(date +'%A, %d %B')"]]))
 
 -- Main binds
@@ -35,6 +34,7 @@ hl.bind("SUPER + SHIFT + I", hl.dsp.exec_cmd(terminal .. " -e wlctl"))
 -- Web apps
 hl.bind("SUPER + SHIFT + apostrophe", hl.dsp.exec_cmd(browser .. [[ --app="https://chatgpt.com"]]))
 hl.bind("SUPER + SHIFT + A", hl.dsp.exec_cmd(browser .. [[ --app="https://chatgpt.com/?temporary-chat=true"]]))
+hl.bind("SUPER + SHIFT + comma", hl.dsp.exec_cmd(browser .. [[ --app="https://claude.ai/new"]]))
 hl.bind("SUPER + SHIFT + O", hl.dsp.exec_cmd(browser .. [[ --app="https://claude.ai/new?incognito="]]))
 hl.bind("SUPER + SHIFT + Y", hl.dsp.exec_cmd(browser .. [[ --app="https://www.youtube.com/"]]))
 hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd(browser .. [[ --app="https://open.spotify.com/"]]))
