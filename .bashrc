@@ -3,6 +3,12 @@
 export EDITOR=nvim
 export VISUAL=nvim
 
+shopt -s histappend
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+export HISTCONTROL=ignoredups
+PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
 eval "$(fzf --bash)"
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"

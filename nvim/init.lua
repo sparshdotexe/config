@@ -226,7 +226,7 @@ do
   vim.g.everforest_disable_italic_comment = 1
   vim.g.everforest_better_performance = 1
 
-  vim.cmd.colorscheme('catppuccin')
+  vim.cmd.colorscheme('tokyonight-night')
 
   vim.pack.add { gh 'folke/todo-comments.nvim' }
   require('todo-comments').setup { signs = false }
