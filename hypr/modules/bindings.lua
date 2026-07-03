@@ -14,7 +14,7 @@ hl.bind("SUPER + W", hl.dsp.exec_cmd("pkill waybar || waybar"))
 hl.bind("SUPER + CTRL + T", hl.dsp.exec_cmd([[notify-send "$(date +'%H:%M')" "$(date +'%A, %d %B')"]]))
 
 -- Main binds
-hl.bind("SUPER + SHIFT + escape", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind("SUPER + SHIFT + backslash", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind("SUPER + return", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + C", hl.dsp.window.close())
 hl.bind("SUPER + space", hl.dsp.exec_cmd(menu))

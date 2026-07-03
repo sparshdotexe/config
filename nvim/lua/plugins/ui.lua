@@ -58,6 +58,7 @@ require('tokyonight').setup {
   end,
 }
 
+vim.pack.add { gh 'gbprod/nord.nvim' }
 vim.pack.add { gh 'sainnhe/everforest' }
 vim.g.everforest_background = 'hard'
 vim.g.everforest_enable_italic = false
@@ -83,7 +84,7 @@ require("nordic").setup{
   end,
 }
 
-vim.cmd.colorscheme('nordic')
+vim.cmd.colorscheme('nord')
 
 vim.pack.add { gh 'folke/todo-comments.nvim' }
 require('todo-comments').setup { signs = false }
