@@ -50,7 +50,7 @@ require('tokyonight').setup {
   styles = {
     comments = { italic = false },
   },
-  on_highlights = function(hl, c)
+  on_highlights = function(hl)
     hl.Comment = {
       fg = "#7a88cf",
       italic = false,
@@ -58,12 +58,30 @@ require('tokyonight').setup {
   end,
 }
 
-vim.pack.add { gh 'AlexvZyl/nordic.nvim' }
 vim.pack.add { gh 'sainnhe/everforest' }
 vim.g.everforest_background = 'hard'
 vim.g.everforest_enable_italic = false
 vim.g.everforest_disable_italic_comment = 1
 vim.g.everforest_better_performance = 1
+
+vim.pack.add { gh 'AlexvZyl/nordic.nvim' }
+require("nordic").setup{
+  italic_comments = false,
+  swap_backgrounds = true,
+  visual = {
+    theme = 'light',
+  },
+  on_highlight = function(hl)
+    hl.Comment = {
+      fg = "#BF616A",
+      italic = false,
+    }
+    hl.MatchParen = {
+      fg = "#C07D68",
+      bold = true,
+    }
+  end,
+}
 
 vim.cmd.colorscheme('nordic')
 
