@@ -43,6 +43,14 @@ vim.keymap.set("v", "<A-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<C
 
 vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<CR><esc>", { desc = "Save file" })
 
+vim.keymap.set("n", "<leader>t", function()
+  vim.cmd("vsplit")
+  vim.cmd("term")
+  vim.cmd("startinsert")
+end, {
+  desc = "Open terminal in vertical split",
+})
+
 vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
 
