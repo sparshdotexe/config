@@ -84,7 +84,7 @@ require("nordic").setup{
   end,
 }
 
-vim.cmd.colorscheme('nordic')
+vim.cmd.colorscheme('nord')
 
 vim.pack.add { gh 'folke/todo-comments.nvim' }
 require('todo-comments').setup { signs = false }

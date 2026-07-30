@@ -28,8 +28,10 @@ font-family = "JetBrainsMono Nerd Font"
 #font-family = "Fira Code Retina"
 #font-family = "Iosevka"
 
-background = #000000
-background-opacity = 0.1
+background = #2e3440
+
+# background = #000000
+# background-opacity = 0.1
 
 cursor-style = block
 cursor-style-blink = false
