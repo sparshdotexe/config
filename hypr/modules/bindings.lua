@@ -9,6 +9,7 @@ local menu = "rofi -show drun"
 hl.bind("SUPER + ALT + B", hl.dsp.exec_cmd("~/.config/hypr/scripts/toggle-battery-limit"))
 hl.bind("SUPER + ALT + N", hl.dsp.exec_cmd("pkill hyprsunset || ~/.config/hypr/scripts/night-mode"))
 hl.bind("SUPER + W", hl.dsp.exec_cmd("pkill waybar || waybar"))
+hl.bind("XF86TouchpadToggle", hl.dsp.exec_cmd("~/.config/hypr/scripts/touchpad"))
 
 -- Notifications
 hl.bind("SUPER + CTRL + T", hl.dsp.exec_cmd([[notify-send "$(date +'%H:%M')" "$(date +'%A, %d %B')"]]))
@@ -96,7 +97,7 @@ hl.bind("ALT + R", hl.dsp.exec_cmd("playerctl play-pause"))
 hl.bind("SUPER + P", hl.dsp.exec_cmd("hyprpicker -a"))
 
 -- Suspend
-hl.bind("SUPER + SHIFT + backslash", hl.dsp.exec_cmd("systemctl suspend"))
+hl.bind("SUPER + SHIFT + backslash", hl.dsp.exec_cmd("systemctl hibernate"))
 
 -- Volume
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2%+"), { locked = true, repeating = true })

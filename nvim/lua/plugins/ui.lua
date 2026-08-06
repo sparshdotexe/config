@@ -85,6 +85,24 @@ require("nordic").setup{
 }
 
 vim.cmd.colorscheme('nord')
+-- local function set_transparent()
+--   local groups = {
+--     'Normal', 'NormalNC', 'NormalFloat', 'FloatBorder', 'FloatTitle',
+--     'SignColumn', 'LineNr', 'CursorLineNr', 'CursorLine',
+--     'EndOfBuffer', 'MsgArea', 'Pmenu', 'PmenuSel', 'WinSeparator',
+--     'StatusLine', 'StatusLineNC', 'TabLine', 'TabLineFill', 'TabLineSel',
+--     'IblIndent', 'IblScope',
+--     'GitSignsAdd', 'GitSignsChange', 'GitSignsDelete',
+--   }
+--   for _, group in ipairs(groups) do
+--     vim.api.nvim_set_hl(0, group, { bg = 'none' })
+--   end
+-- end
+--
+-- set_transparent()
+-- vim.api.nvim_create_autocmd('ColorScheme', {
+--   callback = set_transparent,
+-- })
 
 vim.pack.add { gh 'folke/todo-comments.nvim' }
 require('todo-comments').setup { signs = false }

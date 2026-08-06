@@ -14,11 +14,6 @@ hl.config({
     gaps_out = 3,
     border_size = 0,
 
-    col = {
-      active_border = "rgba(000000ee)",
-      inactive_border = "rgba(1e1e1eee)",
-    },
-
     resize_on_border = false,
     allow_tearing = false,
     layout = "master",
@@ -26,16 +21,12 @@ hl.config({
 
   decoration = {
     rounding = 0,
-    rounding_power = 2,
 
     active_opacity = 1.0,
     inactive_opacity = 1.0,
 
     shadow = {
       enabled = false,
-      range = 4,
-      render_power = 3,
-      color = 0xee1a1a1a,
     },
 
     blur = {

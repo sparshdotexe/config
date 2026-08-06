@@ -1,0 +1,20 @@
+#!/bin/sh
+
+STATE=/tmp/hypr-touchpad-disabled
+
+if [ -f "$STATE" ]; then
+    hyprctl eval 'hl.device({
+        name = "elan1301:00-04f3:3128-touchpad",
+        enabled = true
+    })'
+    notify-send "Touchpad" "Enabled"
+    rm "$STATE"
+else
+    hyprctl eval 'hl.device({
+        name = "elan1301:00-04f3:3128-touchpad",
+        enabled = false
+    })'
+    notify-send "Touchpad" "Disabled"
+    touch "$STATE"
+fi
+
